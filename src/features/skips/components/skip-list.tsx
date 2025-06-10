@@ -1,14 +1,13 @@
-import { useSkips } from '../api/get-skips';
-import { useState } from 'react';
-import { SkipCard } from './skip-card';
-import { SkipListSkeleton } from './skip-list-skeleton';
+import { useSkips } from "../api/get-skips";
+import { useState } from "react";
+import { SkipCard } from "./skip-card";
+import { SkipListSkeleton } from "./skip-list-skeleton";
 
 export const SkipList = () => {
   const [selectedId, setSelectedId] = useState<number | null>(null);
-  const { data, isLoading } = useSkips({ postcode: 'NR32', area: 'Lowestoft' });
+  const { data, isLoading } = useSkips({ postcode: "NR32", area: "Lowestoft" });
 
   if (isLoading) return <SkipListSkeleton />;
-
 
   const skips = data ?? [];
 

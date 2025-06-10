@@ -1,8 +1,8 @@
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { AlertTriangle, Heart } from 'lucide-react';
-import { motion } from 'framer-motion';
-import type { Skip } from '../types/skip';
+import { CardContent, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { AlertTriangle } from "lucide-react";
+import { motion } from "framer-motion";
+import type { Skip } from "../types/skip";
 
 type Props = {
   skip: Skip;
@@ -19,7 +19,11 @@ export const SkipCard = ({ skip, selected, onSelect }: Props) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
       onClick={onSelect}
-      className={`cursor-pointer rounded-3xl overflow-hidden shadow-xl bg-white relative ${selected ? 'border-blue-600 ring-2 ring-blue-500 shadow-lg' : 'border-muted'}`}
+      className={`cursor-pointer rounded-3xl overflow-hidden shadow-xl bg-white relative ${
+        selected
+          ? "border-blue-600 ring-2 ring-blue-500 shadow-lg"
+          : "border-muted"
+      }`}
     >
       <div className="relative w-full h-48 sm:h-56">
         <img
@@ -51,16 +55,15 @@ export const SkipCard = ({ skip, selected, onSelect }: Props) => {
         )}
 
         <div className="mt-4 flex justify-between items-center">
-
           <Button
-            variant={selected ? 'default' : 'outline'}
+            variant={selected ? "default" : "outline"}
             onClick={(e) => {
               e.stopPropagation(); // prevent card-level click
               onSelect();
             }}
             className="w-full"
           >
-            {selected ? 'Selected' : 'Select This Skip'}
+            {selected ? "Selected" : "Select This Skip"}
           </Button>
         </div>
       </CardContent>
