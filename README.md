@@ -97,14 +97,3 @@ src/
 ├── App.tsx                 # Main application component, integrates routing and providers
 └── main.tsx                # Entry point for the React application
 ```
-
-## 💡 Future Improvements / To-Do  
-
-- Implement dynamic postcode and area input from the user.  
-- Add more detailed information to skip cards (e.g., images, weight limits).  
-- Integrate a checkout or next-step flow after skip selection.  
-- Enhance accessibility features further.  
-- Add E2E tests using Playwright or Cypress.  
-- Set up CI/CD pipeline for automated deployments.  
-
-```
